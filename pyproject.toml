@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-analysis-mcp-server"
+version = "0.1.0"
+description = "MCP Server for Code Analysis Tools"
+readme = "README.md"
+requires-python = ">=3.12.8,<3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+dependencies = [
+    "pip==25.0.1",
+    "uvicorn==0.34.1",
+    "starlette==0.46.2",
+    "PyYAML==6.0.2",
+    "ast-grep-py==0.37.0",
+    "fastmcp==2.1.2",
+]
+
+[project.scripts]
+code-analysis-server = "src.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
