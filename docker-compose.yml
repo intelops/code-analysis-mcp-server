@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  code-analysis-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ${PROJECT_DIR:-./sample_project}:/project
+    environment:
+      - PROJECT_PATH=/project
+    restart: unless-stopped
