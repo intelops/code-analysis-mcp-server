@@ -18,7 +18,7 @@ dependencies = [
     "starlette==0.46.2",
     "PyYAML==6.0.2",
     "ast-grep-py==0.37.0",
-    "fastmcp==2.1.2",
+    "fastmcp==2.13.0",
 ]
 
 [project.scripts]
